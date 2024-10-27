@@ -1,0 +1,11 @@
+type Product = 
+ record {
+   id: nat;
+   name: text;
+   price: nat;
+ };
+service : {
+  addProduct: (text, nat) -> (nat);
+  getAllProducts: () -> (vec Product) query;
+  getProduct: (nat) -> (opt Product) query;
+}
